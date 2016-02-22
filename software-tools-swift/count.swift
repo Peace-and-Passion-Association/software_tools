@@ -61,7 +61,7 @@ func wordCount(str:String) -> Int {
 func wc(str:String) -> String {
     //Q 1-4
     var result = ""
-    result = "line : " + String(lineCount(str)) + "word : " + String(wordCount(str)) + "char : " + String(charCount(str))
+    result = "line : " + String(lineCount(str)) + ", word : " + String(wordCount(str)) + ", char : " + String(charCount(str))
     return result
 }
 

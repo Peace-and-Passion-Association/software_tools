@@ -22,9 +22,8 @@ public func absolutePath(path:String) -> String {
 }
 
 public func readFile(path: String) -> String {
-    let absPath = absolutePath(path)
     do {
-        let text = try String(contentsOfFile: absPath, encoding: NSUTF8StringEncoding )
+        let text = try String(contentsOfFile: path, encoding: NSUTF8StringEncoding )
         //print(text)
         return text
     } catch {
