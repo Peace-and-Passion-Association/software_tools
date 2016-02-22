@@ -12,7 +12,6 @@
 		7D6558561C7AF6C9006DCF88 /* getPut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558551C7AF6C9006DCF88 /* getPut.swift */; };
 		7D6558591C7AF6E9006DCF88 /* bufferStreamWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558581C7AF6E9006DCF88 /* bufferStreamWrapper.swift */; };
 		7D65585B1C7AF717006DCF88 /* fileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D65585A1C7AF717006DCF88 /* fileHandler.swift */; };
-		7D6558641C7AF925006DCF88 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558631C7AF925006DCF88 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +44,6 @@
 		7D6558551C7AF6C9006DCF88 /* getPut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getPut.swift; sourceTree = "<group>"; };
 		7D6558581C7AF6E9006DCF88 /* bufferStreamWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bufferStreamWrapper.swift; sourceTree = "<group>"; };
 		7D65585A1C7AF717006DCF88 /* fileHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fileHandler.swift; sourceTree = "<group>"; };
-		7D6558631C7AF925006DCF88 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +82,6 @@
 				7D6558551C7AF6C9006DCF88 /* getPut.swift */,
 				7D6558581C7AF6E9006DCF88 /* bufferStreamWrapper.swift */,
 				7D65585A1C7AF717006DCF88 /* fileHandler.swift */,
-				7D6558631C7AF925006DCF88 /* README.md */,
 			);
 			path = "software-tools-swift";
 			sourceTree = "<group>";
@@ -170,7 +167,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D6558641C7AF925006DCF88 /* README.md in Sources */,
 				7D65584A1C7AC3CF006DCF88 /* copy.swift in Sources */,
 				7D6558561C7AF6C9006DCF88 /* getPut.swift in Sources */,
 				7D65582A1C7AC372006DCF88 /* main.swift in Sources */,
