@@ -12,6 +12,22 @@
 		7D6558561C7AF6C9006DCF88 /* getPut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558551C7AF6C9006DCF88 /* getPut.swift */; };
 		7D6558591C7AF6E9006DCF88 /* bufferStreamWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558581C7AF6E9006DCF88 /* bufferStreamWrapper.swift */; };
 		7D65585B1C7AF717006DCF88 /* fileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D65585A1C7AF717006DCF88 /* fileHandler.swift */; };
+		7D6558781C7B0370006DCF88 /* compress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558711C7B0370006DCF88 /* compress.swift */; };
+		7D6558791C7B0370006DCF88 /* count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558721C7B0370006DCF88 /* count.swift */; };
+		7D65587A1C7B0370006DCF88 /* detab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558731C7B0370006DCF88 /* detab.swift */; };
+		7D65587B1C7B0370006DCF88 /* echo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558741C7B0370006DCF88 /* echo.swift */; };
+		7D65587C1C7B0370006DCF88 /* expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558751C7B0370006DCF88 /* expand.swift */; };
+		7D6558851C7B03AD006DCF88 /* software_tools_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558841C7B03AD006DCF88 /* software_tools_test.swift */; };
+		7D65588A1C7B03D3006DCF88 /* compress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558711C7B0370006DCF88 /* compress.swift */; };
+		7D65588B1C7B03D8006DCF88 /* count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558721C7B0370006DCF88 /* count.swift */; };
+		7D65588C1C7B03D8006DCF88 /* detab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558731C7B0370006DCF88 /* detab.swift */; };
+		7D65588D1C7B03D8006DCF88 /* echo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558741C7B0370006DCF88 /* echo.swift */; };
+		7D65588E1C7B03D8006DCF88 /* expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558751C7B0370006DCF88 /* expand.swift */; };
+		7D65588F1C7B03D8006DCF88 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558291C7AC372006DCF88 /* main.swift */; };
+		7D6558901C7B03D8006DCF88 /* copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558491C7AC3CF006DCF88 /* copy.swift */; };
+		7D6558911C7B03D8006DCF88 /* getPut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558551C7AF6C9006DCF88 /* getPut.swift */; };
+		7D6558921C7B03D8006DCF88 /* bufferStreamWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558581C7AF6E9006DCF88 /* bufferStreamWrapper.swift */; };
+		7D6558931C7B03D8006DCF88 /* fileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D65585A1C7AF717006DCF88 /* fileHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +60,27 @@
 		7D6558551C7AF6C9006DCF88 /* getPut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getPut.swift; sourceTree = "<group>"; };
 		7D6558581C7AF6E9006DCF88 /* bufferStreamWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bufferStreamWrapper.swift; sourceTree = "<group>"; };
 		7D65585A1C7AF717006DCF88 /* fileHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fileHandler.swift; sourceTree = "<group>"; };
+		7D6558711C7B0370006DCF88 /* compress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = compress.swift; sourceTree = "<group>"; };
+		7D6558721C7B0370006DCF88 /* count.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = count.swift; sourceTree = "<group>"; };
+		7D6558731C7B0370006DCF88 /* detab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detab.swift; sourceTree = "<group>"; };
+		7D6558741C7B0370006DCF88 /* echo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = echo.swift; sourceTree = "<group>"; };
+		7D6558751C7B0370006DCF88 /* expand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = expand.swift; sourceTree = "<group>"; };
+		7D6558761C7B0370006DCF88 /* in.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = in.txt; sourceTree = "<group>"; };
+		7D6558771C7B0370006DCF88 /* out.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = out.txt; sourceTree = "<group>"; };
+		7D6558821C7B03AD006DCF88 /* software-tools-test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "software-tools-test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D6558841C7B03AD006DCF88 /* software_tools_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = software_tools_test.swift; sourceTree = "<group>"; };
+		7D6558861C7B03AD006DCF88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7D6558231C7AC372006DCF88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D65587F1C7B03AD006DCF88 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,6 +95,7 @@
 			children = (
 				7D6558431C7AC3B4006DCF88 /* copy.xcodeproj */,
 				7D6558281C7AC372006DCF88 /* software-tools-swift */,
+				7D6558831C7B03AD006DCF88 /* software-tools-test */,
 				7D6558271C7AC372006DCF88 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				7D6558261C7AC372006DCF88 /* software-tools-swift */,
+				7D6558821C7B03AD006DCF88 /* software-tools-test.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,11 +112,17 @@
 		7D6558281C7AC372006DCF88 /* software-tools-swift */ = {
 			isa = PBXGroup;
 			children = (
+				7D6558711C7B0370006DCF88 /* compress.swift */,
+				7D6558721C7B0370006DCF88 /* count.swift */,
+				7D6558731C7B0370006DCF88 /* detab.swift */,
+				7D6558741C7B0370006DCF88 /* echo.swift */,
+				7D6558751C7B0370006DCF88 /* expand.swift */,
 				7D6558291C7AC372006DCF88 /* main.swift */,
 				7D6558491C7AC3CF006DCF88 /* copy.swift */,
 				7D6558551C7AF6C9006DCF88 /* getPut.swift */,
 				7D6558581C7AF6E9006DCF88 /* bufferStreamWrapper.swift */,
 				7D65585A1C7AF717006DCF88 /* fileHandler.swift */,
+				7D65587D1C7B0377006DCF88 /* data */,
 			);
 			path = "software-tools-swift";
 			sourceTree = "<group>";
@@ -92,6 +133,24 @@
 				7D6558481C7AC3B4006DCF88 /* copy */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7D65587D1C7B0377006DCF88 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				7D6558761C7B0370006DCF88 /* in.txt */,
+				7D6558771C7B0370006DCF88 /* out.txt */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		7D6558831C7B03AD006DCF88 /* software-tools-test */ = {
+			isa = PBXGroup;
+			children = (
+				7D6558841C7B03AD006DCF88 /* software_tools_test.swift */,
+				7D6558861C7B03AD006DCF88 /* Info.plist */,
+			);
+			path = "software-tools-test";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,6 +173,23 @@
 			productReference = 7D6558261C7AC372006DCF88 /* software-tools-swift */;
 			productType = "com.apple.product-type.tool";
 		};
+		7D6558811C7B03AD006DCF88 /* software-tools-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D6558871C7B03AD006DCF88 /* Build configuration list for PBXNativeTarget "software-tools-test" */;
+			buildPhases = (
+				7D65587E1C7B03AD006DCF88 /* Sources */,
+				7D65587F1C7B03AD006DCF88 /* Frameworks */,
+				7D6558801C7B03AD006DCF88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "software-tools-test";
+			productName = "software-tools-test";
+			productReference = 7D6558821C7B03AD006DCF88 /* software-tools-test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -125,6 +201,9 @@
 				ORGANIZATIONNAME = AikawaKazuki;
 				TargetAttributes = {
 					7D6558251C7AC372006DCF88 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					7D6558811C7B03AD006DCF88 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -148,6 +227,7 @@
 			projectRoot = "";
 			targets = (
 				7D6558251C7AC372006DCF88 /* software-tools-swift */,
+				7D6558811C7B03AD006DCF88 /* software-tools-test */,
 			);
 		};
 /* End PBXProject section */
@@ -162,16 +242,49 @@
 		};
 /* End PBXReferenceProxy section */
 
+/* Begin PBXResourcesBuildPhase section */
+		7D6558801C7B03AD006DCF88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7D6558221C7AC372006DCF88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7D65584A1C7AC3CF006DCF88 /* copy.swift in Sources */,
+				7D65587C1C7B0370006DCF88 /* expand.swift in Sources */,
+				7D6558781C7B0370006DCF88 /* compress.swift in Sources */,
+				7D6558791C7B0370006DCF88 /* count.swift in Sources */,
+				7D65587B1C7B0370006DCF88 /* echo.swift in Sources */,
 				7D6558561C7AF6C9006DCF88 /* getPut.swift in Sources */,
 				7D65582A1C7AC372006DCF88 /* main.swift in Sources */,
 				7D65585B1C7AF717006DCF88 /* fileHandler.swift in Sources */,
+				7D65587A1C7B0370006DCF88 /* detab.swift in Sources */,
 				7D6558591C7AF6E9006DCF88 /* bufferStreamWrapper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D65587E1C7B03AD006DCF88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D6558901C7B03D8006DCF88 /* copy.swift in Sources */,
+				7D65588B1C7B03D8006DCF88 /* count.swift in Sources */,
+				7D65588F1C7B03D8006DCF88 /* main.swift in Sources */,
+				7D65588D1C7B03D8006DCF88 /* echo.swift in Sources */,
+				7D6558911C7B03D8006DCF88 /* getPut.swift in Sources */,
+				7D6558851C7B03AD006DCF88 /* software_tools_test.swift in Sources */,
+				7D65588E1C7B03D8006DCF88 /* expand.swift in Sources */,
+				7D6558921C7B03D8006DCF88 /* bufferStreamWrapper.swift in Sources */,
+				7D65588C1C7B03D8006DCF88 /* detab.swift in Sources */,
+				7D65588A1C7B03D3006DCF88 /* compress.swift in Sources */,
+				7D6558931C7B03D8006DCF88 /* fileHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +385,28 @@
 			};
 			name = Release;
 		};
+		7D6558881C7B03AD006DCF88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "software-tools-test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AikawaKazuki.software-tools-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7D6558891C7B03AD006DCF88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "software-tools-test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AikawaKazuki.software-tools-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -292,6 +427,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		7D6558871C7B03AD006DCF88 /* Build configuration list for PBXNativeTarget "software-tools-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D6558881C7B03AD006DCF88 /* Debug */,
+				7D6558891C7B03AD006DCF88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

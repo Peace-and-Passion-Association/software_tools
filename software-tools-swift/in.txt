@@ -1,0 +1,11 @@
+a		hello world!
+	hoge foo
+ba	r
+		a
+
+	f
+		owari
+
+
+
+foo
