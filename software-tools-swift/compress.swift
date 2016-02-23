@@ -9,7 +9,7 @@
 import Foundation
 
 let MAXCHUNK: Int = 9
-let RCODE: Character = "@" //XXX
+let RCODE: Character = "#" //XXX
 let THRESH: Int = 5
 
 func compress(str: String) -> String {

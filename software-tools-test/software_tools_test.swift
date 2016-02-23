@@ -111,11 +111,50 @@ class software_tools_test: XCTestCase {
     }
     
     func testCrypt() {
+        // this testbed is [value, key].
+        // if value is crypted twice, the value should be fast value.
         let testbed = [["aab cdef\n", "xyzhoge"], ["\n", "k"], ["", "k"]]
         for o in testbed {
             let cripted = crypt(o[0], key: o[1])
             let uncripted = crypt(cripted, key: o[1])
             XCTAssertEqual(o[0], uncripted)
+        }
+    }
+    
+    func testIndex() {
+        // [string, char, index] // ["", "", 0] raises error
+        let testbed = [["hello", "h", 1], ["hello", "l", 3], ["hello", "w", 0]]
+        for o in testbed {
+            let s = o[1] as! String
+            let c = s[s.startIndex]
+            let result = index(o[0] as! String, c: c)
+            XCTAssertEqual(result, o[2])
+        }
+    }
+    
+    func testxIndex() {
+        // [string, char, allbut, lastto, result] //XXX ["", "", 0] raises error
+        let testbed = [["hello", "h", true, 2, 0], ["hello", "l", false, 2, 3], ["hello", "w", true, 2, 3]]
+        for o in testbed {
+            let s = o[1] as! String
+            let c = s[s.startIndex]
+            let allbut = o[2] as! Bool
+            let lastto = o[3] as! Int
+            let result = xindex(o[0] as! String, c: c, allbut: allbut, lastto: lastto)
+            XCTAssertEqual(result, o[4])
+        }
+    }
+    
+    func testMakset() {
+        // [string, ["c", "h", "a", "r"]]
+        let testbed = [["", [""]], ["hello", ["h", "e", "l", "l", "o"]]]
+        for o in testbed {
+            let result = o[0]  as! String
+            var charArray :[Character] = []
+            for c in o[1] as! Array<Character> {
+                charArray.append(c as Character)
+            }
+            XCTAssertEqual(makset(charArray), result)
         }
     }
     

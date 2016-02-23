@@ -30,6 +30,8 @@
 		7D6559551C7C277D006DCF88 /* bufferStreamWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558581C7AF6E9006DCF88 /* bufferStreamWrapper.swift */; };
 		7D6559561C7C277D006DCF88 /* fileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D65585A1C7AF717006DCF88 /* fileHandler.swift */; };
 		7D6559571C7C277D006DCF88 /* crypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6559271C7C15CE006DCF88 /* crypt.swift */; };
+		7D65596A1C7C3D96006DCF88 /* tralslit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6559691C7C3D96006DCF88 /* tralslit.swift */; };
+		7D65596B1C7C3E5B006DCF88 /* tralslit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6559691C7C3D96006DCF88 /* tralslit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,7 @@
 		7D65590A1C7BF485006DCF88 /* expand.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = expand.xcodeproj; path = expand/expand.xcodeproj; sourceTree = "<group>"; };
 		7D6559271C7C15CE006DCF88 /* crypt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crypt.swift; sourceTree = "<group>"; };
 		7D65593C1C7C1833006DCF88 /* crypt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = crypt.xcodeproj; path = crypt/crypt.xcodeproj; sourceTree = "<group>"; };
+		7D6559691C7C3D96006DCF88 /* tralslit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tralslit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,7 @@
 				7D6558581C7AF6E9006DCF88 /* bufferStreamWrapper.swift */,
 				7D65585A1C7AF717006DCF88 /* fileHandler.swift */,
 				7D6559271C7C15CE006DCF88 /* crypt.swift */,
+				7D6559691C7C3D96006DCF88 /* tralslit.swift */,
 				7D65587D1C7B0377006DCF88 /* data */,
 			);
 			path = "software-tools-swift";
@@ -409,6 +413,7 @@
 				7D65587B1C7B0370006DCF88 /* echo.swift in Sources */,
 				7D6558561C7AF6C9006DCF88 /* getPut.swift in Sources */,
 				7D65582A1C7AC372006DCF88 /* main.swift in Sources */,
+				7D65596A1C7C3D96006DCF88 /* tralslit.swift in Sources */,
 				7D65585B1C7AF717006DCF88 /* fileHandler.swift in Sources */,
 				7D65587A1C7B0370006DCF88 /* detab.swift in Sources */,
 				7D6558591C7AF6E9006DCF88 /* bufferStreamWrapper.swift in Sources */,
@@ -431,6 +436,7 @@
 				7D65594F1C7C277D006DCF88 /* detab.swift in Sources */,
 				7D65594D1C7C277D006DCF88 /* compress.swift in Sources */,
 				7D6559561C7C277D006DCF88 /* fileHandler.swift in Sources */,
+				7D65596B1C7C3E5B006DCF88 /* tralslit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
