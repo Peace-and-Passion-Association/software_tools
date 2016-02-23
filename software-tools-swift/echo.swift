@@ -9,11 +9,11 @@
 import Foundation
 
 func echo () -> String{
-    let str = readInput()
+    let str = readLine(stripNewline: false)
     let standardOutput = NSFileHandle.fileHandleWithStandardOutput()
-    let dataout: NSData? = str.dataUsingEncoding(NSUTF8StringEncoding)
+    let dataout: NSData? = str!.dataUsingEncoding(NSUTF8StringEncoding)
     if let dout = dataout {
         standardOutput.writeData(dout)
     }
-    return str as String
+    return str! as String
 }

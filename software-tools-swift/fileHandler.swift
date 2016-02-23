@@ -33,14 +33,6 @@ public func readFile(path: String) -> String {
     }
 }
 
-public func readInput() -> String! {
-    //    let handle = NSFileHandle.fileHandleWithStandardInput()
-    //    let data = handle.availableData
-    //    let str = NSString(data: data, encoding:NSUTF8StringEncoding)
-    let str = readLine()
-    return str!
-}
-
 public func fileInit(path:String) {
     if let outputStream = NSOutputStream(toFileAtPath: path, append: false) {
         outputStream.open()
@@ -51,7 +43,7 @@ public func fileInit(path:String) {
 
 public func write(str :String, path: String? = nil, append: Bool = false) {
     if path == nil {
-        print(str)
+        print(str, terminator:"")
     } else {
         if let outputStream = NSOutputStream(toFileAtPath: path!, append: append) {
             outputStream.open()

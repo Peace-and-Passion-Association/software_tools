@@ -77,7 +77,7 @@ class PutC {
     
     func put_c(c:Character, path:String? = nil, append: Bool = false)  -> String {
         /*
-        @param c Character to put
+        @param c Character to put. If get EOF, output buffer.
         @param path : String absolute path of the file.
         */
         let getC = GetC()

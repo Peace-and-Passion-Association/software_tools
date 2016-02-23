@@ -52,6 +52,20 @@
 			remoteGlobalIDString = 7D6558C11C7BDBAB006DCF88;
 			remoteInfo = detab;
 		};
+		7D6558F21C7BE171006DCF88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D6558EE1C7BE170006DCF88 /* compress.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7D6558E41C7BE170006DCF88;
+			remoteInfo = compress;
+		};
+		7D65590E1C7BF486006DCF88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D65590A1C7BF485006DCF88 /* expand.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7D6559001C7BF485006DCF88;
+			remoteInfo = expand;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,6 +100,8 @@
 		7D6558861C7B03AD006DCF88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D6558A71C7B0525006DCF88 /* wordcount.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wordcount.xcodeproj; path = wordcount/wordcount.xcodeproj; sourceTree = "<group>"; };
 		7D6558CB1C7BDBAB006DCF88 /* detab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = detab.xcodeproj; path = detab/detab.xcodeproj; sourceTree = "<group>"; };
+		7D6558EE1C7BE170006DCF88 /* compress.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = compress.xcodeproj; path = compress/compress.xcodeproj; sourceTree = "<group>"; };
+		7D65590A1C7BF485006DCF88 /* expand.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = expand.xcodeproj; path = expand/expand.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +125,8 @@
 		7D65581D1C7AC372006DCF88 = {
 			isa = PBXGroup;
 			children = (
+				7D65590A1C7BF485006DCF88 /* expand.xcodeproj */,
+				7D6558EE1C7BE170006DCF88 /* compress.xcodeproj */,
 				7D6558CB1C7BDBAB006DCF88 /* detab.xcodeproj */,
 				7D6558A71C7B0525006DCF88 /* wordcount.xcodeproj */,
 				7D6558431C7AC3B4006DCF88 /* copy.xcodeproj */,
@@ -187,6 +205,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		7D6558EF1C7BE170006DCF88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D6558F31C7BE171006DCF88 /* compress */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D65590B1C7BF485006DCF88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D65590F1C7BF486006DCF88 /* expand */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,12 +288,20 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 7D6558EF1C7BE170006DCF88 /* Products */;
+					ProjectRef = 7D6558EE1C7BE170006DCF88 /* compress.xcodeproj */;
+				},
+				{
 					ProductGroup = 7D6558441C7AC3B4006DCF88 /* Products */;
 					ProjectRef = 7D6558431C7AC3B4006DCF88 /* copy.xcodeproj */;
 				},
 				{
 					ProductGroup = 7D6558CC1C7BDBAB006DCF88 /* Products */;
 					ProjectRef = 7D6558CB1C7BDBAB006DCF88 /* detab.xcodeproj */;
+				},
+				{
+					ProductGroup = 7D65590B1C7BF485006DCF88 /* Products */;
+					ProjectRef = 7D65590A1C7BF485006DCF88 /* expand.xcodeproj */;
 				},
 				{
 					ProductGroup = 7D6558A81C7B0525006DCF88 /* Products */;
@@ -294,6 +336,20 @@
 			fileType = "compiled.mach-o.executable";
 			path = detab;
 			remoteRef = 7D6558CF1C7BDBAC006DCF88 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7D6558F31C7BE171006DCF88 /* compress */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = compress;
+			remoteRef = 7D6558F21C7BE171006DCF88 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7D65590F1C7BF486006DCF88 /* expand */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = expand;
+			remoteRef = 7D65590E1C7BF486006DCF88 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

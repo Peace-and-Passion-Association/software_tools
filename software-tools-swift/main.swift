@@ -7,6 +7,9 @@
 //
 
 import Foundation
+var test = false
+var bufferStream = BufferStreamWrapper()
 
 print("Hello, World!")
 
+echo()

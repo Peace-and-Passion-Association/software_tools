@@ -8,7 +8,7 @@
 
 import Foundation
 
-let MAXCHUNK: Int = 10
+let MAXCHUNK: Int = 9
 let RCODE: Character = "@" //XXX
 let THRESH: Int = 5
 
@@ -25,7 +25,6 @@ func compress(str: String) -> String {
     
     nsave = 0
     for lastc = getC.get_c(); lastc != getC.EOF; lastc = c {
-        print(i)
         for nrep = 1; getC.get_c(&c) == lastc; nrep++ {
             if nrep >= MAXCHUNK {// count repetitions
                 break
@@ -45,11 +44,10 @@ func compress(str: String) -> String {
             result += putC.put_c(lastc)
             result += putC.put_c(nrep)
         }
-        print("F")
-        print(c)
         i++
     }
     result += putbuf(buf, nsave: &nsave)
+    result += putC.put_c(getC.EOF) // output buffer
     return result
 }
 

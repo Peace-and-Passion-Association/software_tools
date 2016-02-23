@@ -8,6 +8,9 @@
 
 import XCTest
 
+var test = true // is test?
+var bufferStream = BufferStreamWrapper() // for test
+
 class software_tools_test: XCTestCase {
     
     override func setUp() {
@@ -95,6 +98,7 @@ class software_tools_test: XCTestCase {
     func testDetab() {
         let testbed = [["", ""], ["\n", "\n"],  ["\ta", "    a"], ["a.\n \thello world!\n", "a.\n    hello world!\n"]]
         for o in testbed {
+            print(detab(o[0]))
             XCTAssertEqual(detab(o[0]), o[1])
         }
     }

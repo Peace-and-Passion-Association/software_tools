@@ -9,7 +9,7 @@
 import Foundation
 let MAXLINE = 1000
 let TABNUM = 4
-//XXX 
+//XXX detab is not working well with terminal "\t"??
 func detab (str: String) -> String {
     let getC = GetC(text: str)
     let putC = PutC.putC
@@ -34,6 +34,7 @@ func detab (str: String) -> String {
         }
         c = getC.get_c()
     }
+    result += putC.put_c(c) // output buffer.
     return result
 }
 
