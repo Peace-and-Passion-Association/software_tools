@@ -69,12 +69,12 @@
 			isa = PBXGroup;
 			children = (
 				7D6559031C7BF485006DCF88 /* main.swift */,
-				7D6559101C7BF663006DCF88 /* buildCommand.sh */,
 				7D6559111C7BF679006DCF88 /* bufferStreamWrapper.swift */,
 				7D6559121C7BF679006DCF88 /* compress.swift */,
 				7D6559131C7BF679006DCF88 /* expand.swift */,
 				7D6559141C7BF679006DCF88 /* fileHandler.swift */,
 				7D6559151C7BF679006DCF88 /* getPut.swift */,
+				7D6559101C7BF663006DCF88 /* buildCommand.sh */,
 			);
 			path = expand;
 			sourceTree = "<group>";
@@ -261,6 +261,7 @@
 				7D6559091C7BF485006DCF88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

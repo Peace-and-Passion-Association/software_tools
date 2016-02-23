@@ -51,5 +51,14 @@ public func write(str :String, path: String? = nil, append: Bool = false) {
             outputStream.close()
         }
     }
-    
+}
+
+public func stdError(str: String) {
+    let outputString: NSString = NSString(string: str)
+    let dataout: NSData? = outputString.dataUsingEncoding(NSUTF8StringEncoding)
+    let standardError = NSFileHandle.fileHandleWithStandardError()
+    if let dout = dataout {
+        standardError.writeData(dout)
+    }
+    exit(1)
 }

@@ -1,6 +1,6 @@
 //
 //  main.swift
-//  expand
+//  crypt
 //
 //  Created by 相川　和希 on 2016/02/23.
 //  Copyright © 2016年 AikawaKazuki. All rights reserved.
@@ -15,38 +15,37 @@ let argv:[String] = Process.arguments
 let argc:Int = Process.arguments.count
 var input: String = ""
 var output: String?
+var key: String = ""
 let result: String
 
-if argc == 1 {
+
+/* execute (command + argc.len)
+./crypt <in.txt out.txt key (3)
+./crypt <in.txt >out.txt key (2)
+./crypt in.txt out.txt key (4)
+./crypt in.txt >out.txt key (3)
+./crypt text out.txt key (4)
+./crypt text >out.txt key (3)
+*/
+if argc == 2 {
     while let line: String = readLine(stripNewline: false) {
         input += (line)
     }
-} else if argc == 2 || argc == 3 {
+    key = argv[1]
+} else if argc == 4 {
     let manager = NSFileManager()
     if manager.fileExistsAtPath(argv[1]) {
         input = readFile(argv[1])
     } else {
         input = argv[1]
     }
-    if argc == 3 {
-        output = argv[2]
-    }
+    output = argv[2]
+    key = argv[3]
 } else {
-    print("usage: expand src_file target_file key")
-    exit(1)
+    stdError("usage: crypt [[ src_file | src_text ] target_file crypt_key]")
 }
 
-// remove automatically "\n" of input.
-//print("from")
-//print(input, terminator:"")
-//print([Character](input.characters))
-//input = input.substringToIndex(input.endIndex.predecessor())
-//print("as")
-//print(input, terminator:"")
-//print([Character](input.characters))
-//print("to")
-
-result = expand(input)
+result = crypt(input, key: key)
 if output != nil {
     fileInit(output!)
 }

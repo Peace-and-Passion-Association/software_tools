@@ -8,8 +8,8 @@
 
 import XCTest
 
-var test = true // is test?
-var bufferStream = BufferStreamWrapper() // for test
+//var test = true // is test?
+//var bufferStream = BufferStreamWrapper() // for test
 
 class software_tools_test: XCTestCase {
     
@@ -107,8 +107,15 @@ class software_tools_test: XCTestCase {
         let testbed = [["", ""], ["\t      a", "\t\t  a"], ["\n", "\n"],  ["    a", "\ta"], ["     a", "\t a"],[" a\n hello world!\n", " a\n hello world!\n"]]
         for o in testbed {
             XCTAssertEqual(entab(o[0]), o[1])
-            print(entab(o[0]))
-            print(o[1])
+        }
+    }
+    
+    func testCrypt() {
+        let testbed = [["aab cdef\n", "xyzhoge"], ["\n", "k"], ["", "k"]]
+        for o in testbed {
+            let cripted = crypt(o[0], key: o[1])
+            let uncripted = crypt(cripted, key: o[1])
+            XCTAssertEqual(o[0], uncripted)
         }
     }
     

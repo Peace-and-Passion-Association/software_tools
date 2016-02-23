@@ -18,16 +18,18 @@
 		7D65587B1C7B0370006DCF88 /* echo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558741C7B0370006DCF88 /* echo.swift */; };
 		7D65587C1C7B0370006DCF88 /* expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558751C7B0370006DCF88 /* expand.swift */; };
 		7D6558851C7B03AD006DCF88 /* software_tools_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558841C7B03AD006DCF88 /* software_tools_test.swift */; };
-		7D65588A1C7B03D3006DCF88 /* compress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558711C7B0370006DCF88 /* compress.swift */; };
-		7D65588B1C7B03D8006DCF88 /* count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558721C7B0370006DCF88 /* count.swift */; };
-		7D65588C1C7B03D8006DCF88 /* detab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558731C7B0370006DCF88 /* detab.swift */; };
-		7D65588D1C7B03D8006DCF88 /* echo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558741C7B0370006DCF88 /* echo.swift */; };
-		7D65588E1C7B03D8006DCF88 /* expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558751C7B0370006DCF88 /* expand.swift */; };
-		7D65588F1C7B03D8006DCF88 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558291C7AC372006DCF88 /* main.swift */; };
-		7D6558901C7B03D8006DCF88 /* copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558491C7AC3CF006DCF88 /* copy.swift */; };
-		7D6558911C7B03D8006DCF88 /* getPut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558551C7AF6C9006DCF88 /* getPut.swift */; };
-		7D6558921C7B03D8006DCF88 /* bufferStreamWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558581C7AF6E9006DCF88 /* bufferStreamWrapper.swift */; };
-		7D6558931C7B03D8006DCF88 /* fileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D65585A1C7AF717006DCF88 /* fileHandler.swift */; };
+		7D6559281C7C15CE006DCF88 /* crypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6559271C7C15CE006DCF88 /* crypt.swift */; };
+		7D65594D1C7C277D006DCF88 /* compress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558711C7B0370006DCF88 /* compress.swift */; };
+		7D65594E1C7C277D006DCF88 /* count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558721C7B0370006DCF88 /* count.swift */; };
+		7D65594F1C7C277D006DCF88 /* detab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558731C7B0370006DCF88 /* detab.swift */; };
+		7D6559501C7C277D006DCF88 /* echo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558741C7B0370006DCF88 /* echo.swift */; };
+		7D6559511C7C277D006DCF88 /* expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558751C7B0370006DCF88 /* expand.swift */; };
+		7D6559521C7C277D006DCF88 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558291C7AC372006DCF88 /* main.swift */; };
+		7D6559531C7C277D006DCF88 /* copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558491C7AC3CF006DCF88 /* copy.swift */; };
+		7D6559541C7C277D006DCF88 /* getPut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558551C7AF6C9006DCF88 /* getPut.swift */; };
+		7D6559551C7C277D006DCF88 /* bufferStreamWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558581C7AF6E9006DCF88 /* bufferStreamWrapper.swift */; };
+		7D6559561C7C277D006DCF88 /* fileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D65585A1C7AF717006DCF88 /* fileHandler.swift */; };
+		7D6559571C7C277D006DCF88 /* crypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6559271C7C15CE006DCF88 /* crypt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,13 @@
 			remoteGlobalIDString = 7D6559001C7BF485006DCF88;
 			remoteInfo = expand;
 		};
+		7D6559401C7C1834006DCF88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D65593C1C7C1833006DCF88 /* crypt.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7D6559321C7C1833006DCF88;
+			remoteInfo = crypt;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -102,6 +111,8 @@
 		7D6558CB1C7BDBAB006DCF88 /* detab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = detab.xcodeproj; path = detab/detab.xcodeproj; sourceTree = "<group>"; };
 		7D6558EE1C7BE170006DCF88 /* compress.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = compress.xcodeproj; path = compress/compress.xcodeproj; sourceTree = "<group>"; };
 		7D65590A1C7BF485006DCF88 /* expand.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = expand.xcodeproj; path = expand/expand.xcodeproj; sourceTree = "<group>"; };
+		7D6559271C7C15CE006DCF88 /* crypt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crypt.swift; sourceTree = "<group>"; };
+		7D65593C1C7C1833006DCF88 /* crypt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = crypt.xcodeproj; path = crypt/crypt.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +136,7 @@
 		7D65581D1C7AC372006DCF88 = {
 			isa = PBXGroup;
 			children = (
+				7D65593C1C7C1833006DCF88 /* crypt.xcodeproj */,
 				7D65590A1C7BF485006DCF88 /* expand.xcodeproj */,
 				7D6558EE1C7BE170006DCF88 /* compress.xcodeproj */,
 				7D6558CB1C7BDBAB006DCF88 /* detab.xcodeproj */,
@@ -158,6 +170,7 @@
 				7D6558551C7AF6C9006DCF88 /* getPut.swift */,
 				7D6558581C7AF6E9006DCF88 /* bufferStreamWrapper.swift */,
 				7D65585A1C7AF717006DCF88 /* fileHandler.swift */,
+				7D6559271C7C15CE006DCF88 /* crypt.swift */,
 				7D65587D1C7B0377006DCF88 /* data */,
 			);
 			path = "software-tools-swift";
@@ -217,6 +230,14 @@
 			isa = PBXGroup;
 			children = (
 				7D65590F1C7BF486006DCF88 /* expand */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D65593D1C7C1833006DCF88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D6559411C7C1834006DCF88 /* crypt */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -296,6 +317,10 @@
 					ProjectRef = 7D6558431C7AC3B4006DCF88 /* copy.xcodeproj */;
 				},
 				{
+					ProductGroup = 7D65593D1C7C1833006DCF88 /* Products */;
+					ProjectRef = 7D65593C1C7C1833006DCF88 /* crypt.xcodeproj */;
+				},
+				{
 					ProductGroup = 7D6558CC1C7BDBAB006DCF88 /* Products */;
 					ProjectRef = 7D6558CB1C7BDBAB006DCF88 /* detab.xcodeproj */;
 				},
@@ -352,6 +377,13 @@
 			remoteRef = 7D65590E1C7BF486006DCF88 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		7D6559411C7C1834006DCF88 /* crypt */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = crypt;
+			remoteRef = 7D6559401C7C1834006DCF88 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -370,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D65584A1C7AC3CF006DCF88 /* copy.swift in Sources */,
+				7D6559281C7C15CE006DCF88 /* crypt.swift in Sources */,
 				7D65587C1C7B0370006DCF88 /* expand.swift in Sources */,
 				7D6558781C7B0370006DCF88 /* compress.swift in Sources */,
 				7D6558791C7B0370006DCF88 /* count.swift in Sources */,
@@ -386,17 +419,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D6558901C7B03D8006DCF88 /* copy.swift in Sources */,
-				7D65588B1C7B03D8006DCF88 /* count.swift in Sources */,
-				7D65588F1C7B03D8006DCF88 /* main.swift in Sources */,
-				7D65588D1C7B03D8006DCF88 /* echo.swift in Sources */,
-				7D6558911C7B03D8006DCF88 /* getPut.swift in Sources */,
+				7D6559531C7C277D006DCF88 /* copy.swift in Sources */,
+				7D65594E1C7C277D006DCF88 /* count.swift in Sources */,
+				7D6559521C7C277D006DCF88 /* main.swift in Sources */,
+				7D6559501C7C277D006DCF88 /* echo.swift in Sources */,
+				7D6559541C7C277D006DCF88 /* getPut.swift in Sources */,
 				7D6558851C7B03AD006DCF88 /* software_tools_test.swift in Sources */,
-				7D65588E1C7B03D8006DCF88 /* expand.swift in Sources */,
-				7D6558921C7B03D8006DCF88 /* bufferStreamWrapper.swift in Sources */,
-				7D65588C1C7B03D8006DCF88 /* detab.swift in Sources */,
-				7D65588A1C7B03D3006DCF88 /* compress.swift in Sources */,
-				7D6558931C7B03D8006DCF88 /* fileHandler.swift in Sources */,
+				7D6559511C7C277D006DCF88 /* expand.swift in Sources */,
+				7D6559551C7C277D006DCF88 /* bufferStreamWrapper.swift in Sources */,
+				7D6559571C7C277D006DCF88 /* crypt.swift in Sources */,
+				7D65594F1C7C277D006DCF88 /* detab.swift in Sources */,
+				7D65594D1C7C277D006DCF88 /* compress.swift in Sources */,
+				7D6559561C7C277D006DCF88 /* fileHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +581,7 @@
 				7D6558891C7B03AD006DCF88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
