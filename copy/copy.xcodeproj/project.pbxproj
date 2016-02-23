@@ -33,7 +33,7 @@
 		7D65585C1C7AF89E006DCF88 /* getPut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = getPut.swift; path = "../../software-tools-swift/getPut.swift"; sourceTree = "<group>"; };
 		7D65585E1C7AF8B4006DCF88 /* bufferStreamWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = bufferStreamWrapper.swift; path = "../../software-tools-swift/bufferStreamWrapper.swift"; sourceTree = "<group>"; };
 		7D65585F1C7AF8B4006DCF88 /* fileHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = fileHandler.swift; path = "../../software-tools-swift/fileHandler.swift"; sourceTree = "<group>"; };
-		7D6558621C7AF8FD006DCF88 /* buildCommand.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = buildCommand.txt; sourceTree = "<group>"; };
+		7D6558621C7AF8FD006DCF88 /* buildCommand.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = buildCommand.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 				7D65585E1C7AF8B4006DCF88 /* bufferStreamWrapper.swift */,
 				7D65585F1C7AF8B4006DCF88 /* fileHandler.swift */,
 				7D65585C1C7AF89E006DCF88 /* getPut.swift */,
-				7D6558621C7AF8FD006DCF88 /* buildCommand.txt */,
+				7D6558621C7AF8FD006DCF88 /* buildCommand.sh */,
 			);
 			path = copy;
 			sourceTree = "<group>";

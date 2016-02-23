@@ -45,6 +45,13 @@
 			remoteGlobalIDString = 7D65589D1C7B0525006DCF88;
 			remoteInfo = wordcount;
 		};
+		7D6558CF1C7BDBAC006DCF88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D6558CB1C7BDBAB006DCF88 /* detab.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7D6558C11C7BDBAB006DCF88;
+			remoteInfo = detab;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -78,6 +85,7 @@
 		7D6558841C7B03AD006DCF88 /* software_tools_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = software_tools_test.swift; sourceTree = "<group>"; };
 		7D6558861C7B03AD006DCF88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D6558A71C7B0525006DCF88 /* wordcount.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wordcount.xcodeproj; path = wordcount/wordcount.xcodeproj; sourceTree = "<group>"; };
+		7D6558CB1C7BDBAB006DCF88 /* detab.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = detab.xcodeproj; path = detab/detab.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 		7D65581D1C7AC372006DCF88 = {
 			isa = PBXGroup;
 			children = (
+				7D6558CB1C7BDBAB006DCF88 /* detab.xcodeproj */,
 				7D6558A71C7B0525006DCF88 /* wordcount.xcodeproj */,
 				7D6558431C7AC3B4006DCF88 /* copy.xcodeproj */,
 				7D6558281C7AC372006DCF88 /* software-tools-swift */,
@@ -166,6 +175,14 @@
 			isa = PBXGroup;
 			children = (
 				7D6558AC1C7B0526006DCF88 /* wordcount */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D6558CC1C7BDBAB006DCF88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D6558D01C7BDBAC006DCF88 /* detab */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,6 +258,10 @@
 					ProjectRef = 7D6558431C7AC3B4006DCF88 /* copy.xcodeproj */;
 				},
 				{
+					ProductGroup = 7D6558CC1C7BDBAB006DCF88 /* Products */;
+					ProjectRef = 7D6558CB1C7BDBAB006DCF88 /* detab.xcodeproj */;
+				},
+				{
 					ProductGroup = 7D6558A81C7B0525006DCF88 /* Products */;
 					ProjectRef = 7D6558A71C7B0525006DCF88 /* wordcount.xcodeproj */;
 				},
@@ -266,6 +287,13 @@
 			fileType = "compiled.mach-o.executable";
 			path = wordcount;
 			remoteRef = 7D6558AB1C7B0526006DCF88 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7D6558D01C7BDBAC006DCF88 /* detab */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = detab;
+			remoteRef = 7D6558CF1C7BDBAC006DCF88 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

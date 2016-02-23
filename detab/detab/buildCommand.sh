@@ -1,0 +1,1 @@
+xcrun -sdk macosx swiftc -o detab main.swift ../../software-tools-swift/fileHandler.swift ../../software-tools-swift/getPut.swift ../../software-tools-swift/bufferStreamWrapper.swift ../../software-tools-swift/detab.swift
