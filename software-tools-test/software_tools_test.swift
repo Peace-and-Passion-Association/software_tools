@@ -146,15 +146,29 @@ class software_tools_test: XCTestCase {
     }
     
     func testMakset() {
-        // [string, ["c", "h", "a", "r"]]
-        let testbed = [["", [""]], ["hello", ["h", "e", "l", "l", "o"]]]
-        for o in testbed {
-            let result = o[0]  as! String
+        // [string, ["c", "h", "a", "r"]] //XXX ["", [""]] can't work well.
+        let testbed: [[Character]] = [["h", "e", "l", "l", "o"]]
+        let result: [String] = ["hello"]
+        for var i = 0; i < testbed.count; i++ {
+            let r = result[i]
             var charArray :[Character] = []
-            for c in o[1] as! Array<Character> {
+            for c in testbed[i] {
                 charArray.append(c as Character)
             }
-            XCTAssertEqual(makset(charArray), result)
+            XCTAssertEqual(makset(charArray), r)
+        }
+    }
+    
+    func testCtoi() {
+        // [base, start, after, result]: [string, int, int, int]
+        let testbed = [["1", 0, 1, 1], ["12", 0, 2, 12], ["  12hello", 1, 4, 12]]
+        for o in testbed {
+            let s = o[0] as! String
+            var i = o[1] as! Int
+            let ri = o[2] as! Int
+            let r = o[3] as! Int
+            XCTAssertEqual(ctoi(s, i: &i), r)
+            XCTAssertEqual(i, ri)
         }
     }
     

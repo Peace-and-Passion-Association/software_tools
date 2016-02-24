@@ -54,7 +54,6 @@ func wordCount(str:String) -> Int {
         }
         c = getC.get_c()
     }
-    
     return wc
 }
 

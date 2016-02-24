@@ -7,3 +7,5 @@
 //
 
 import Foundation
+
+let EOS: Character = "$"
