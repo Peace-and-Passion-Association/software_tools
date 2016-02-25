@@ -75,7 +75,7 @@ class PutC {
         return result
     }
     
-    func put_c(c:Character, path:String? = nil, append: Bool = false)  -> String {
+    func put_c(c:Character, path:String? = nil, append: Bool = false) -> String {
         /*
         @param c Character to put. If get EOF, output buffer.
         @param path : String absolute path of the file.
@@ -101,9 +101,14 @@ class PutC {
         return result
     }
     
-    func put_c(c:Int, path:String? = nil, append: Bool = false)  -> String {
+    func put_c(c:Int, path:String? = nil, append: Bool = false) -> String {
         let str = String(c)
         return self.put_s(str, path: path, append: append)
+    }
+    
+    func outputBuffer(path:String? = nil, append: Bool = false) -> String {
+        let result = self.put_c(EOF, path: path, append: append)
+        return result
     }
     
 }

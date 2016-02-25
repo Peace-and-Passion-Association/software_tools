@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		7D18A7E71C7D575200AEDFC6 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D18A7E61C7D575200AEDFC6 /* common.swift */; };
 		7D18A7EE1C7D581C00AEDFC6 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D18A7E61C7D575200AEDFC6 /* common.swift */; };
+		7D18A7F01C7E8D0600AEDFC6 /* tail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D18A7EF1C7E8D0600AEDFC6 /* tail.swift */; };
+		7D18A7F11C7E933700AEDFC6 /* tail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D18A7EF1C7E8D0600AEDFC6 /* tail.swift */; };
+		7D18A8161C7EA31F00AEDFC6 /* argParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D18A8151C7EA31F00AEDFC6 /* argParser.swift */; };
+		7D18A8171C7EA49400AEDFC6 /* argParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D18A8151C7EA31F00AEDFC6 /* argParser.swift */; };
 		7D65582A1C7AC372006DCF88 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558291C7AC372006DCF88 /* main.swift */; };
 		7D65584A1C7AC3CF006DCF88 /* copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558491C7AC3CF006DCF88 /* copy.swift */; };
 		7D6558561C7AF6C9006DCF88 /* getPut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6558551C7AF6C9006DCF88 /* getPut.swift */; };
@@ -37,6 +41,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7D18A8091C7E965E00AEDFC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D18A8051C7E965D00AEDFC6 /* tail.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7D18A7FB1C7E965D00AEDFC6;
+			remoteInfo = tail;
+		};
 		7D6558471C7AC3B4006DCF88 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7D6558431C7AC3B4006DCF88 /* copy.xcodeproj */;
@@ -95,6 +106,9 @@
 
 /* Begin PBXFileReference section */
 		7D18A7E61C7D575200AEDFC6 /* common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
+		7D18A7EF1C7E8D0600AEDFC6 /* tail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tail.swift; sourceTree = "<group>"; };
+		7D18A8051C7E965D00AEDFC6 /* tail.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = tail.xcodeproj; path = tail/tail.xcodeproj; sourceTree = "<group>"; };
+		7D18A8151C7EA31F00AEDFC6 /* argParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = argParser.swift; sourceTree = "<group>"; };
 		7D6558261C7AC372006DCF88 /* software-tools-swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "software-tools-swift"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D6558291C7AC372006DCF88 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7D6558431C7AC3B4006DCF88 /* copy.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = copy.xcodeproj; path = copy/copy.xcodeproj; sourceTree = "<group>"; };
@@ -139,9 +153,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D18A8061C7E965D00AEDFC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D18A80A1C7E965E00AEDFC6 /* tail */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		7D65581D1C7AC372006DCF88 = {
 			isa = PBXGroup;
 			children = (
+				7D18A8051C7E965D00AEDFC6 /* tail.xcodeproj */,
 				7D65593C1C7C1833006DCF88 /* crypt.xcodeproj */,
 				7D65590A1C7BF485006DCF88 /* expand.xcodeproj */,
 				7D6558EE1C7BE170006DCF88 /* compress.xcodeproj */,
@@ -179,6 +202,8 @@
 				7D6559271C7C15CE006DCF88 /* crypt.swift */,
 				7D6559691C7C3D96006DCF88 /* tralslit.swift */,
 				7D18A7E61C7D575200AEDFC6 /* common.swift */,
+				7D18A7EF1C7E8D0600AEDFC6 /* tail.swift */,
+				7D18A8151C7EA31F00AEDFC6 /* argParser.swift */,
 				7D65587D1C7B0377006DCF88 /* data */,
 			);
 			path = "software-tools-swift";
@@ -337,6 +362,10 @@
 					ProjectRef = 7D65590A1C7BF485006DCF88 /* expand.xcodeproj */;
 				},
 				{
+					ProductGroup = 7D18A8061C7E965D00AEDFC6 /* Products */;
+					ProjectRef = 7D18A8051C7E965D00AEDFC6 /* tail.xcodeproj */;
+				},
+				{
 					ProductGroup = 7D6558A81C7B0525006DCF88 /* Products */;
 					ProjectRef = 7D6558A71C7B0525006DCF88 /* wordcount.xcodeproj */;
 				},
@@ -350,6 +379,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		7D18A80A1C7E965E00AEDFC6 /* tail */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = tail;
+			remoteRef = 7D18A8091C7E965E00AEDFC6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		7D6558481C7AC3B4006DCF88 /* copy */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
@@ -412,8 +448,10 @@
 				7D65584A1C7AC3CF006DCF88 /* copy.swift in Sources */,
 				7D6559281C7C15CE006DCF88 /* crypt.swift in Sources */,
 				7D18A7E71C7D575200AEDFC6 /* common.swift in Sources */,
+				7D18A7F01C7E8D0600AEDFC6 /* tail.swift in Sources */,
 				7D65587C1C7B0370006DCF88 /* expand.swift in Sources */,
 				7D6558781C7B0370006DCF88 /* compress.swift in Sources */,
+				7D18A8161C7EA31F00AEDFC6 /* argParser.swift in Sources */,
 				7D6558791C7B0370006DCF88 /* count.swift in Sources */,
 				7D65587B1C7B0370006DCF88 /* echo.swift in Sources */,
 				7D6558561C7AF6C9006DCF88 /* getPut.swift in Sources */,
@@ -432,7 +470,9 @@
 				7D18A7EE1C7D581C00AEDFC6 /* common.swift in Sources */,
 				7D6559531C7C277D006DCF88 /* copy.swift in Sources */,
 				7D65594E1C7C277D006DCF88 /* count.swift in Sources */,
+				7D18A8171C7EA49400AEDFC6 /* argParser.swift in Sources */,
 				7D6559521C7C277D006DCF88 /* main.swift in Sources */,
+				7D18A7F11C7E933700AEDFC6 /* tail.swift in Sources */,
 				7D6559501C7C277D006DCF88 /* echo.swift in Sources */,
 				7D6559541C7C277D006DCF88 /* getPut.swift in Sources */,
 				7D6558851C7B03AD006DCF88 /* software_tools_test.swift in Sources */,

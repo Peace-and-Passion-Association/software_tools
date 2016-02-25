@@ -71,9 +71,18 @@ func makset(charArray: [Character]) -> String {
 func ctoi(base: String, inout i: Int) -> Int { // in is reserved by swift.
     var d: Int
     let digits: String = "0123456789"
+    var sign: Int = 1   // 1 or -1 Q2-23
     var result = 0
     
     while base[base.startIndex.advancedBy(i)] == " " || base[base.startIndex.advancedBy(i)] == "\t" {
+        i++
+    }
+    if base[base.startIndex.advancedBy(i)] == "-" {
+        sign = -1
+        i++
+    }
+    if base[base.startIndex.advancedBy(i)] == "+" {
+        sign = 1
         i++
     }
     for result = 0; i < base.characters.count; i++ {
@@ -83,22 +92,23 @@ func ctoi(base: String, inout i: Int) -> Int { // in is reserved by swift.
         }
         result = 10 * result + d - 1
     }
+    result = result * sign
     return result
 }
 
 func itoc(base: Int) -> String {
-    let digits: String = "0123456789"
+    //let digits: String = "0123456789"
     var i: Int
     var d: Int
     var j: Int
-    var k: String
+    var k: Character
     var intval = abs(base)
     var result = ""
     var cArray: [Character] = []
-    var sArray: [String] = []
-    var size = 10000 //XXX
-    cArray.append(EOS)
-    i = 1
+    let size = 10000 //XXX
+    //cArray.append(EOS)
+    //i = 1
+    i = -1 // to start from 0 of subscript
     repeat {
         i++
         d = intval % 10
@@ -111,12 +121,32 @@ func itoc(base: Int) -> String {
         cArray.append("-")
     }
     //itoc = i - 1
-    for j = 1; j < i; j++ { // then reverse
-        k = cArray[cArray.startIndex.advancedBy(i)]
+    for j = 0; j < i; j++ { // then reverse
+        k = cArray[i]
         cArray[i] = cArray[j]
         cArray[j] = k
         i--
     }
-    result = array.joinWithSeparator("")
+    result = String(cArray)
+    return result
+}
+
+func putdec(n: Int, w: Int) -> String {
+    let putC = PutC.putC
+    var result: String = ""
+    var nd: Int
+    var str: String
+    var chars: [Character]
+    
+    str = itoc(n)
+    nd = str.characters.count
+    chars = Array(str.characters)
+    for var i = nd; i < w; i++ {
+        result += putC.put_c(" ")
+    }
+    for var i = 0; i < nd; i++ {
+        result += putC.put_c(chars[i])
+    }
+    result += putC.put_c(EOF) // outputBuffer
     return result
 }

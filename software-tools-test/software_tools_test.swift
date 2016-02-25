@@ -160,8 +160,8 @@ class software_tools_test: XCTestCase {
     }
     
     func testCtoi() {
-        // [base, start, after, result]: [string, int, int, int]
-        let testbed = [["1", 0, 1, 1], ["12", 0, 2, 12], ["  12hello", 1, 4, 12]]
+        // [base, starti, afteri, result]: [string, int, int, int]
+        let testbed = [["1", 0, 1, 1], ["-1", 0, 2, -1], ["12", 0, 2, 12], ["  12hello", 1, 4, 12]]
         for o in testbed {
             let s = o[0] as! String
             var i = o[1] as! Int
@@ -172,4 +172,38 @@ class software_tools_test: XCTestCase {
         }
     }
     
+    func testItoc() {
+        // [base, result]: [Int, String]
+        let testbed = [[0, "0"], [12, "12"], [-123, "-123"]]
+        for o in testbed {
+            let b = o[0] as! Int
+            let s = o[1] as! String
+            let r = itoc(b)
+            XCTAssertEqual(s, r)
+        }
+    }
+    
+    func testPutdec() {
+        //[baseNum, baseWidth, result]
+        let testbed = [[0, 2, " 0"], [12, 0, "12"], [-123, 4, "-123"]]
+        for o in testbed {
+            let b = o[0] as! Int
+            let w = o[1] as! Int
+            let s = o[2] as! String
+            let r = putdec(b, w: w)
+            XCTAssertEqual(s, r)
+        }
+    }
+    
+    func testTail() {
+        // [baseStr, numOfLine, result]: [String, Int, String]
+        let testbed = [["", 1, ""], ["1\n2\n3\n4\n5\n", 3, "3\n4\n5\n"], ["1\n2\n", 4, "1\n2\n"]]
+        for o in testbed {
+            let b = o[0] as! String
+            let n = o[1] as! Int
+            let s = o[2] as! String
+            let r = tail(b, n: n)
+            XCTAssertEqual(s, r)
+        }
+    }
 }

@@ -9,3 +9,4 @@
 import Foundation
 
 let EOS: Character = "$"
+let EOF: Character = "&"
