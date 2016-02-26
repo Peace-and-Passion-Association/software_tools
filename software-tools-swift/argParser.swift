@@ -23,6 +23,7 @@ class ArgParser {
         for var i = 0; i < args.count; i++ {
             if opts.contains(args[i]) {
                 optsDict[args[i]] = args[i+1]
+                i++
             } else {
                 argsWithoutOpts.append(args[i])
             }
