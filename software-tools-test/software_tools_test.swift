@@ -206,4 +206,19 @@ class software_tools_test: XCTestCase {
             XCTAssertEqual(s, r)
         }
     }
+    
+    func testCalc() {
+        //[[input], result] : [[String], String]
+        let testbed = [[["1", "*", "2", "+", "3", "/", "5", "="], "2"], [["1", "+", "3", "="], "4"], [["2", "-", "4", "*", "(", "1", "+", "2", "+", "(", "3", "/", "3", ")", ")", "="], "-14"], [["4", "*", "(", "1", "+", "2", ")", "="], "12"]]
+        for o in testbed {
+            let b = o[0] as! [String]
+            let i = o[1] as! String
+            print(b)
+            var r = calc(b)
+            r = r.substringToIndex(r.endIndex.predecessor().predecessor())
+            //XXX
+            XCTAssertEqual(i, r)
+        }
+    }
+    
 }
