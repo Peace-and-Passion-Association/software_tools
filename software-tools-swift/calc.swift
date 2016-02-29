@@ -106,3 +106,51 @@ func parenthesis(inout array: [String]) -> String {
     array.removeAtIndex(begin)
     return "MORE"
 }
+
+
+
+
+
+
+
+
+
+
+
+func calcWithStack(var input: [String]) -> String {
+    var result: String
+    var stack: [String]
+    var accum: String // accumulator
+    if let tmp = next(&input) {
+        accum = tmp
+    } else {
+        stdError("input is nil")
+    }
+    return result
+}
+
+func push<T>(inout stack: [T], value: T) {
+    stack.insert(value, atIndex: 0)
+}
+
+func pop<T>(inout stack: [T]) -> T? {
+    var result: T
+    if stack.isEmpty {
+        return nil
+    } else {
+        result = stack[0]
+        stack.removeFirst()
+    }
+    return result
+}
+
+func next<T>(inout input: [T]) -> T? {
+    var result: T
+    if input.isEmpty {
+        return nil
+    } else {
+        result = input[0]
+        input.removeFirst()
+    }
+    return result
+}
