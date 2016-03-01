@@ -99,6 +99,13 @@
 			remoteGlobalIDString = 7D6559321C7C1833006DCF88;
 			remoteInfo = crypt;
 		};
+		7DB424251C852BBC00B58053 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DB4241B1C852BBC00B58053 /* reversePolishCalc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7DB424111C852BBC00B58053;
+			remoteInfo = reversePolishCalc;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -144,6 +151,7 @@
 		7D6559271C7C15CE006DCF88 /* crypt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crypt.swift; sourceTree = "<group>"; };
 		7D65593C1C7C1833006DCF88 /* crypt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = crypt.xcodeproj; path = crypt/crypt.xcodeproj; sourceTree = "<group>"; };
 		7D6559691C7C3D96006DCF88 /* tralslit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tralslit.swift; sourceTree = "<group>"; };
+		7DB4241B1C852BBC00B58053 /* reversePolishCalc.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = reversePolishCalc.xcodeproj; path = reversePolishCalc/reversePolishCalc.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +191,7 @@
 		7D65581D1C7AC372006DCF88 = {
 			isa = PBXGroup;
 			children = (
+				7DB4241B1C852BBC00B58053 /* reversePolishCalc.xcodeproj */,
 				7D18A82E1C80679C00AEDFC6 /* calc.xcodeproj */,
 				7D18A8051C7E965D00AEDFC6 /* tail.xcodeproj */,
 				7D65593C1C7C1833006DCF88 /* crypt.xcodeproj */,
@@ -296,6 +305,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		7DB4241C1C852BBC00B58053 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DB424261C852BBC00B58053 /* reversePolishCalc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -387,6 +404,10 @@
 					ProjectRef = 7D65590A1C7BF485006DCF88 /* expand.xcodeproj */;
 				},
 				{
+					ProductGroup = 7DB4241C1C852BBC00B58053 /* Products */;
+					ProjectRef = 7DB4241B1C852BBC00B58053 /* reversePolishCalc.xcodeproj */;
+				},
+				{
 					ProductGroup = 7D18A8061C7E965D00AEDFC6 /* Products */;
 					ProjectRef = 7D18A8051C7E965D00AEDFC6 /* tail.xcodeproj */;
 				},
@@ -458,6 +479,13 @@
 			fileType = "compiled.mach-o.executable";
 			path = crypt;
 			remoteRef = 7D6559401C7C1834006DCF88 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7DB424261C852BBC00B58053 /* reversePolishCalc */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = reversePolishCalc;
+			remoteRef = 7DB424251C852BBC00B58053 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

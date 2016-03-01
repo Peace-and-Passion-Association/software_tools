@@ -213,10 +213,24 @@ class software_tools_test: XCTestCase {
         for o in testbed {
             let b = o[0] as! [String]
             let i = o[1] as! String
-            print(b)
             var r = calc(b)
             r = r.substringToIndex(r.endIndex.predecessor().predecessor())
-            //XXX
+            //XXX remove ".0"
+            XCTAssertEqual(i, r)
+        }
+    }
+    
+    func testReversePolishCalc() {
+        //[[input], result] : [[String], String]
+        let testbed = [[["1", "2", "+", "5", "3", "*", "*"], "45"], [["1", "3", "+"], "4"]]
+        for o in testbed {
+            let b = o[0] as! [String]
+            let i = o[1] as! String
+            var r = reversePolishCalc(b)
+            print(r)
+            r = r.substringToIndex(r.endIndex.predecessor().predecessor())
+            //XXX remove ".0"
+            print(r)
             XCTAssertEqual(i, r)
         }
     }
