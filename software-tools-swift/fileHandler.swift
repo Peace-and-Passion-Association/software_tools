@@ -28,7 +28,7 @@ public func readFile(path: String) -> String {
         return text
     } catch {
         //handling error
-        print("File open error")
+        print("File open error. path: " + path + " is not correct")
         exit(1)
     }
 }
@@ -54,11 +54,15 @@ public func write(str :String, path: String? = nil, append: Bool = false) {
 }
 
 public func stdError(str: String) {
+    remark(str)
+    exit(1)
+}
+
+public func remark(str: String) {
     let outputString: NSString = NSString(string: str)
     let dataout: NSData? = outputString.dataUsingEncoding(NSUTF8StringEncoding)
     let standardError = NSFileHandle.fileHandleWithStandardError()
     if let dout = dataout {
         standardError.writeData(dout)
     }
-    exit(1)
 }

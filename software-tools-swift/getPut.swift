@@ -18,6 +18,7 @@ public class GetC {
     init(text:String = "") {
         self.text = text
     }
+    
     func get_c(inout char: Character!, remove_backspaces: Bool = false) -> Character {
         // use inout, to be similar to the book.
         char = get_c(remove_backspaces)
@@ -38,6 +39,30 @@ public class GetC {
             self.lastc = self.lastc + 1
             return c
         }
+    }
+    
+    func getlin(inout str:String!) -> String {
+        // original returns length or EOF, but in swift, we can know the length easily.
+        // this returns line or EOF as String.
+        str = getlin()
+        return str
+    }
+    
+    func getlin() -> String {
+        var c: Character!
+        var str: String = ""
+        c = self.get_c()
+        if c == self.EOF {
+            return String(self.EOF)
+        }
+        while c != self.EOF {
+            str += String(c)
+            if c == "\n" {
+                break
+            }
+            c = self.get_c()
+        }
+        return str
     }
     
     func del_backspace(c:Character) -> Character { // hello   \n  world   \n
@@ -88,13 +113,7 @@ class PutC {
             if c == getC.EOF {
                 self.buf = self.buf.substringToIndex(self.buf.endIndex.predecessor())
             }
-            if path != nil {
-                //print(self.buf)
-                write(self.buf, path: path!, append: append)
-            }
-            if test == true {
-                bufferStream.write(self.buf)
-            }
+            write(self.buf, path: path!, append: append)
             result = self.buf
             self.buf = ""
         }
@@ -109,6 +128,10 @@ class PutC {
     func outputBuffer(path:String? = nil, append: Bool = false) -> String {
         let result = self.put_c(EOF, path: path, append: append)
         return result
+    }
+    
+    func putlin(str: String, path: String? = nil, append: Bool = false) -> String {
+        return self.put_s(str, path: path, append: append)
     }
     
 }

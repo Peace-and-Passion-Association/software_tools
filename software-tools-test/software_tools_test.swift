@@ -235,4 +235,64 @@ class software_tools_test: XCTestCase {
         }
     }
     
+    func testEqual() {
+        //[input1, input2, result] : [String, String, bool]
+        let testbed = [["", "", true], ["hello\n", "hello\n", true], ["hoge", "foo", false]]
+        for o in testbed {
+            let a = o[0] as! String
+            let b = o[1] as! String
+            let r = equal(a, str2: b)
+            XCTAssertEqual(r, o[2])
+        }
+    }
+    
+    func testGetwrd() {
+        //[base, index, result, afterindex]
+        let testbed = [["", 0, "", 0], ["Hello World!", 0, "Hello", 5], ["Hello World!", 1, "ello", 5], ["Hello World!", 5, "World!", 12]]
+        for o in testbed {
+            let a = o[0] as! String
+            var b = o[1] as! Int
+            let r = getwrd(a, index: &b)
+            XCTAssertEqual(r, o[2])
+            XCTAssertEqual(b, o[3] as? Int)
+        }
+    }
+ 
+    func testConcatToAny() {
+        var pathes: [String] = []
+        var result = concat(pathes)
+        XCTAssertEqual(result, "")
+    }
+    
+    func testBubbleSort() {
+        //[[base],[result]] : [[Int], [Int]]
+        let testbed = [[[], []], [[1], [1]], [[3, 1, 2], [1, 2, 3]], [[3, 1, 2, 4], [1, 2, 3, 4]]]
+        for o in testbed {
+            let a = o[0] as [Int]
+            let b = o[1] as [Int]
+            let r = bubble(a)
+            XCTAssertEqual(b, r)
+        }
+    }
+    
+    func testShellSort() {
+        //[[base],[result]] : [[Int], [Int]]
+        let testbed = [[[], []], [[1], [1]], [[3, 1, 2, 4], [1, 2, 3, 4]]]
+        for o in testbed {
+            let a = o[0] as [Int]
+            let b = o[1] as [Int]
+            let r = shell(a)
+            XCTAssertEqual(b, r)
+        }
+    }
+    
+    func testTShellSort() {
+        let testbed = [["", ""], ["1", "1"], ["world!\nhello\n", "hello\nworld!\n"]]
+        for o in testbed {
+            let a = o[0] as String
+            let b = o[1] as String
+            let r = sortSentence(a)
+            XCTAssertEqual(b, r)
+        }
+    }
 }
