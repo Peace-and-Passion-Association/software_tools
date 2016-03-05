@@ -14,14 +14,20 @@ import Foundation
 
 class ArgParser {
     var argv: [String]
+    var opts: [String]
     init(argv: [String]) {
         self.argv = argv
+        self.opts = []
     }
+
     func optionParse(args: [String], opts: [String]) -> ([String], [String:String]) {
         var optsDict = [String: String]()
         var argsWithoutOpts: [String] = []
         for var i = 0; i < args.count; i++ {
             if opts.contains(args[i]) {
+                if (args.count - 1) < (i + 1) {
+                    stdError("XXX")
+                }
                 optsDict[args[i]] = args[i+1]
                 i++
             } else {
@@ -30,4 +36,8 @@ class ArgParser {
         }
         return (argsWithoutOpts, optsDict)
     }
+}
+
+class Option {
+    //XXX
 }

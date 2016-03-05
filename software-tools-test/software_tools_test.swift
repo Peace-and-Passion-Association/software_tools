@@ -286,12 +286,64 @@ class software_tools_test: XCTestCase {
         }
     }
     
-    func testTShellSort() {
+    func testSortSentence() {
         let testbed = [["", ""], ["1", "1"], ["world!\nhello\n", "hello\nworld!\n"]]
         for o in testbed {
             let a = o[0] as String
             let b = o[1] as String
             let r = sortSentence(a)
+            XCTAssertEqual(b, r)
+        }
+    }
+    
+    func testSortSentenceWithReverse() {
+        let testbed = [["", ""], ["1", "1"], ["world!\nhello\n", "world!\nhello\n"]]
+        for o in testbed {
+            let a = o[0] as String
+            let b = o[1] as String
+            let r = sortSentence(a, reverse: true)
+            XCTAssertEqual(b, r)
+        }
+    }
+    
+    func testQuickSort() {
+        //[[base],[result]] : [[Int], [Int]]
+        let testbed = [[[], []], [[1], [1]], [[3, 1, 2, 4], [1, 2, 3, 4]]]
+        for o in testbed {
+            var a = o[0] as [Int]
+            let b = o[1] as [Int]
+            let r = quick(&a)
+            XCTAssertEqual(b, r)
+        }
+    }
+    
+    func testQuickSortString() {
+        //[[base],[result]] : [[Int], [Int]]
+        let testbed = [["", ""], ["1", "1"], ["world!\nhello\n", "hello\nworld!\n"]]
+        for o in testbed {
+            let a = o[0] as String
+            let b = o[1] as String
+            let r = sortSentence(a, algo: "quick")
+            XCTAssertEqual(b, r)
+        }
+    }
+    
+    func testUnique() {
+        let testbed = [["", ""], ["1", "1"], ["1\n1\n", "1\n"], ["hello\nhello\nworld\n", "hello\nworld\n"]]
+        for o in testbed {
+            let a = o[0] as String
+            let b = o[1] as String
+            let r = unique(a)
+            XCTAssertEqual(b, r)
+        }
+    }
+    
+    func testUniqueWithRep() {
+        let testbed = [["", ""], ["1", "1 1"], ["1\n1\n", "2 1\n"], ["hello\nhello\nworld\n", "2 hello\n1 world\n"]]
+        for o in testbed {
+            let a = o[0] as String
+            let b = o[1] as String
+            let r = unique(a, rep: true)
             XCTAssertEqual(b, r)
         }
     }
