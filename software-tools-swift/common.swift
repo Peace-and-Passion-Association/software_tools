@@ -10,6 +10,10 @@ import Foundation
 
 let EOS: Character = "$"
 let EOF: Character = "&"
+let ESCAPE: Character = "#"
+let digits: String = "0123456789"
+let lowalf: String = "abcdefghijklmnopqrstuvwxyz"
+let upalf: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 func cant(fileName: String) {
     stdError(fileName + ": can't open")

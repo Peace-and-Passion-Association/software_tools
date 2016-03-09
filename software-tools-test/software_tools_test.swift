@@ -347,4 +347,32 @@ class software_tools_test: XCTestCase {
             XCTAssertEqual(b, r)
         }
     }
+    
+    func testTranslit() {
+        // [base, from, to, allbut, result]
+        let testbed = [["", "", "", false, ""], ["hello world!", "h", "y", false, "yello world!"], ["hello world!", "he", "ya", false, "yallo world!"], ["hello world!", "hello", "ya", false, "ya warad!"]]
+        for o in testbed {
+            let a = o[0] as! String
+            let b = o[1] as! String
+            let c = o[2] as! String
+            let d = o[3] as! Bool
+            let res = o[4] as! String
+            let r = translit(a, from: b, to: c, allbut: d)
+            XCTAssertEqual(res, r)
+        }
+    }
+    
+    func testTranslitWithAllbut() {
+        // [base, from, to, allbut, result]
+        let testbed = [["", "", "", true, ""], ["hello world!", "he", "y", true, "hey"]]
+        for o in testbed {
+            let a = o[0] as! String
+            let b = o[1] as! String
+            let c = o[2] as! String
+            let d = o[3] as! Bool
+            let res = o[4] as! String
+            let r = translit(a, from: b, to: c, allbut: d)
+            XCTAssertEqual(res, r)
+        }
+    }
 }
