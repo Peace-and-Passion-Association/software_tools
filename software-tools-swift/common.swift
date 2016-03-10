@@ -11,6 +11,7 @@ import Foundation
 let EOS: Character = "$"
 let EOF: Character = "&"
 let ESCAPE: Character = "#"
+let CLOSURE: Character = "*"
 let digits: String = "0123456789"
 let lowalf: String = "abcdefghijklmnopqrstuvwxyz"
 let upalf: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"

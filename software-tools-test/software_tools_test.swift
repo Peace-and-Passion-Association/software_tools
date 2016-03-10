@@ -406,4 +406,17 @@ class software_tools_test: XCTestCase {
         }
     }
     
+    func testMatch() {
+        //[string, pattern, bool]
+        let testbed = [["var i = 0", "var", true], ["var i = 0", "let", false]]
+        for o in testbed {
+            let a = o[0] as! String
+            let b = o[1] as! String
+            let r = o[2] as! Bool
+            let res = match(a, pat: b)
+            XCTAssertEqual(res, r)
+        }
+        
+    }
+    
 }
