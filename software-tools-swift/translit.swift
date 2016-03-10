@@ -190,8 +190,17 @@ func makset(charArray: [Character]) -> String {
 }
 
 func addset(c: Character, inout set: String, inout index: Int) {
-    set.append(c)
-    index++
+    if set.characters.count <= index {
+        set.append(c)
+        index++
+    } else if index < 0{
+        stdError("index cannot minus")
+    } else {
+        var tmp = Array(set.characters)
+        tmp[index] = c
+        set = String(tmp)
+        index++
+    }
 }
 
 func filset(charArray: [Character]) -> String {
@@ -200,23 +209,31 @@ func filset(charArray: [Character]) -> String {
     
     for var i = 0; i < charArray.count; i++ { // delim?
         if charArray[i] == ESCAPE {
-//            addset(esc)XXX
+            addset(esc(charArray, index: i), set: &result, index: &j)
         } else if charArray[i] != "-" {
             addset(charArray[i], set: &result, index: &j)
         } else if j == 0 || (i + 1) == charArray.count {
             addset("-", set: &result, index: &j)
         } else if swiftIndex(digits, c: result[result.startIndex.advancedBy(j-1)]) >= 0 {
-//            dodashXXX
+            dodash(digits, array: charArray, i: &i, set: &result, j: &j)
+        } else if swiftIndex(lowalf, c: result[result.startIndex.advancedBy(j-1)]) >= 0 {
+            dodash(lowalf, array: charArray, i: &i, set: &result, j: &j)
+        } else if swiftIndex(upalf, c: result[result.startIndex.advancedBy(j-1)]) >= 0 {
+            dodash(upalf, array: charArray, i: &i, set: &result, j: &j)
+        } else {
+            addset("-", set: &result, index: &j)
         }
-    
     }
+    return result
 }
 
-func dodash(valid: String, array: [Character], i: Int, inout set: String, inout j: Int) {
+func dodash(valid: String, array: [Character], inout i: Int, inout set: String, inout j: Int) {
     i = i + 1
     j = j - 1
     let limit = swiftIndex(valid, c: esc(array, index: i))
-    
+    for var k = swiftIndex(valid, c: set[set.startIndex.advancedBy(j)]); k <= limit; k++ {
+        addset(valid[valid.startIndex.advancedBy(k)], set: &set, index: &j)
+    }
 }
 
 func esc(array: [Character], index: Int) -> Character {

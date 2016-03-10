@@ -54,7 +54,7 @@ public func write(str :String, path: String? = nil, append: Bool = false) {
 }
 
 public func stdError(str: String) {
-    remark(str)
+    remark(str + "\n")
     exit(1)
 }
 

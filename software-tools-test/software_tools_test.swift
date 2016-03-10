@@ -375,4 +375,35 @@ class software_tools_test: XCTestCase {
             XCTAssertEqual(res, r)
         }
     }
+    
+    func testDodash() {
+        //valid, array, i, set, index, result]
+        let testbed = [[lowalf, "a-c", 1, "a", 1, "abc"], [lowalf, "a-z", 1, "a", 1, "abcdefghijklmnopqrstuvwxyz"]]
+        for o in testbed {
+            let a = o[0] as! String
+            let s = o[1] as! String
+            let b = Array(s.characters)
+            var c = o[2] as! Int
+            var d = o[3] as! String
+            var e = o[4] as! Int
+            let res = o[5] as! String
+            dodash(a, array: b, i: &c, set: &d, j: &e)
+            print(d)
+            print(e)
+            XCTAssertEqual(res, d)
+        }
+    }
+    
+    func testFilset() {
+        // [string, result]
+        let testbed = [["", ""], ["hello", "hello"], ["a-c", "abc"], ["1-5", "12345"]]
+        for o in testbed {
+            let s = o[0] 
+            let a = Array(s.characters)
+            let res = o[1] 
+            let r = filset(a)
+            XCTAssertEqual(res, r)
+        }
+    }
+    
 }
