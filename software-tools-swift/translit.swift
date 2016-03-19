@@ -182,11 +182,16 @@ func translit(base: String, from: String, to: String, allbut: Bool = false) -> S
 
 // makset and sub routines.
 func makset(charArray: [Character]) -> String {
-    var resultArray: [String] = [] //XXX working
-    for var i = 0; i < charArray.count; i++ {
-        resultArray.append(String(charArray[i]))
-    }
-    return resultArray.joinWithSeparator("")
+    return String(charArray)
+}
+
+func makset(array: [Character], k: Int, inout set: String) -> String {
+    var i = k
+    var j = 0
+    var arr = array
+    arr.append(EOS)
+    filset(EOS, charArray: arr , i: &i, set: &set, j: &j)
+    return set
 }
 
 func addset(c: Character, inout set: String, inout index: Int) {
@@ -201,6 +206,29 @@ func addset(c: Character, inout set: String, inout index: Int) {
         set = String(tmp)
         index++
     }
+}
+
+func filset(delim: Character, charArray: [Character], inout i: Int, inout set: String,inout j: Int) -> String {
+    // for using in getccl
+    
+    for ; i < charArray.count && charArray[i] != delim; i++ { // delim
+        if charArray[i] == ESCAPE {
+            addset(esc(charArray, index: i), set: &set, index: &j)
+        } else if charArray[i] != "-" {
+            addset(charArray[i], set: &set, index: &j)
+        } else if j == 0 || (i + 1) == charArray.count {
+            addset("-", set: &set, index: &j)
+        } else if swiftIndex(digits, c: set[set.startIndex.advancedBy(j-1)]) >= 0 {
+            dodash(digits, array: charArray, i: &i, set: &set, j: &j)
+        } else if swiftIndex(lowalf, c: set[set.startIndex.advancedBy(j-1)]) >= 0 {
+            dodash(lowalf, array: charArray, i: &i, set: &set, j: &j)
+        } else if swiftIndex(upalf, c: set[set.startIndex.advancedBy(j-1)]) >= 0 {
+            dodash(upalf, array: charArray, i: &i, set: &set, j: &j)
+        } else {
+            addset("-", set: &set, index: &j)
+        }
+    }
+    return set
 }
 
 func filset(charArray: [Character]) -> String {

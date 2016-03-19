@@ -159,6 +159,21 @@ class software_tools_test: XCTestCase {
         }
     }
     
+    func testMakset2() {
+        // [string, ["c", "h", "a", "r"]] //XXX ["", [""]] can't work well.
+        let testbed: [[Character]] = [["h", "e", "l", "l", "o"]]
+        let result: [String] = ["hello"]
+        var s: String = ""
+        for var i = 0; i < testbed.count; i++ {
+            let r = result[i]
+            var charArray :[Character] = []
+            for c in testbed[i] {
+                charArray.append(c as Character)
+            }
+            XCTAssertEqual(makset(charArray, k: 0, set: &s), r)
+        }
+    }
+    
     func testCtoi() {
         // [base, starti, afteri, result]: [string, int, int, int]
         let testbed = [["1", 0, 1, 1], ["-1", 0, 2, -1], ["12", 0, 2, 12], ["  12hello", 1, 4, 12]]
@@ -406,6 +421,22 @@ class software_tools_test: XCTestCase {
         }
     }
     
+    func testFilset2() {
+        // [string, result, delim, i, j, set]
+        let testbed = [["", "", "!", 0, 0, ""], ["hello", "hello", "!", 0, 0, ""], ["a-c", "abc", "!", 0, 0, ""], ["1-5", "12345", "!", 0, 0, ""], ["helloa-c!def", "helloabc", "!", 0, 0, ""], ["01-5", "12345", "!", 1, 0, ""], ["hello1-5worl!d", "foello12345worl", "!", 1, 2, "foo"]]
+        for o in testbed {
+            let s = o[0] as! String
+            let a = Array(s.characters)
+            let res = o[1]
+            let delim = Character(o[2] as! String)
+            var i = o[3] as! Int
+            var j = o[4] as! Int
+            var set = o[5] as! String
+            let r = filset(delim, charArray: a, i: &i, set: &set, j: &j)
+            XCTAssertEqual(res, r)
+        }
+    }
+    
     func testMatch() {
         //[string, pattern, bool]
         let testbed = [["var i = 0", "var", true], ["var i = 0", "let", false]]
@@ -419,4 +450,70 @@ class software_tools_test: XCTestCase {
         
     }
     
+    func testLocate() {
+        //[c, pat, offset, result]
+        let testbed = [["a", "5apple", 0, true], ["a", "a4pple", 1, false]]
+        for o in testbed {
+            let a = Character(o[0] as! String)
+            let b = o[1] as! String
+            let c = o[2] as! Int
+            let r = o[3] as! Bool
+            let res = locate(a, pat: b, offset: c)
+            XCTAssertEqual(res, r)
+        }
+    }
+    
+    func testPatsiz() {
+        //[pat, index, result]
+        let testbed = [[String(CHAR) + "x", 0, 2], ["[3xyz]", 0, 5], ["%", 0, 1]]
+        for o in testbed {
+            let a = o[0] as! String
+            let b = o[1] as! Int
+            let r = o[2] as! Int
+            let res = patsiz(a, index: b)
+            XCTAssertEqual(res, r)
+        }
+    }
+    
+    func testGetpat() {
+        //[arg, pat, result]: [String, String, String]
+        let testbed = [["hi", "", String(CHAR) + "h" + String(CHAR) + "i"]]
+        for o in testbed {
+            let a = o[0] as! String
+            var b = o[1] as! String
+            let r = o[2] as! String
+            let res = getpat(a, pat: &b)
+            XCTAssertEqual(b, r)
+        }
+    }
+    
+    func testMakpat() {
+        //[arg, from, delim, pat, result]: [String, Int, Character, String, String]
+        let testbed = [["hiØ", 0, "Ø", "", String(CHAR) + "h" + String(CHAR) + "i"]]
+        for o in testbed {
+            let a = o[0] as! String
+            let b = o[1] as! Int
+            let c = Character(o[2] as! String)
+            var d = o[3] as! String
+            let r = o[4] as! String
+            let res = makpat(a, from: b, delim: c, pat: &d)
+            XCTAssertEqual(d, r)
+        }
+    }
+    
+    func testGetccl() {
+        //[arg, i pat, j, result, afterpat] = [String, int, string, int, bool, String]
+        let testbed = [["[hello]", 0, "", 0, true, "[5hello"], ["my[hello]", 2, "", 0, true, "[5hello"]] //["hello", 0, "", 0, false, "hello"],
+        for o in testbed {
+            let a = o[0] as! String
+            var b = o[1] as! Int
+            var c = o[2] as! String
+            var d = o[3] as! Int
+            let r = o[4] as! Bool
+            let rp = o[5] as! String
+            let res = getccl(a, i: &b, pat: &c, j: &d)
+            XCTAssertEqual(r, res)
+            XCTAssertEqual(rp, c)
+        }
+    }
 }

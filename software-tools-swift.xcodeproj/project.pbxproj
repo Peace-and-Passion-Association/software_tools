@@ -45,13 +45,13 @@
 		7D65596A1C7C3D96006DCF88 /* translit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6559691C7C3D96006DCF88 /* translit.swift */; };
 		7D65596B1C7C3E5B006DCF88 /* translit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6559691C7C3D96006DCF88 /* translit.swift */; };
 		7D6BC9E31C911651003DF3E2 /* find.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6BC9E21C911651003DF3E2 /* find.swift */; };
-		7D6BC9E41C911653003DF3E2 /* find.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6BC9E21C911651003DF3E2 /* find.swift */; };
 		7DB4243E1C866D4100B58053 /* compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB4243D1C866D4100B58053 /* compare.swift */; };
 		7DB4243F1C866D4100B58053 /* compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB4243D1C866D4100B58053 /* compare.swift */; };
 		7DB424701C86900C00B58053 /* concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB4246F1C86900C00B58053 /* concat.swift */; };
 		7DB424711C86900C00B58053 /* concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB4246F1C86900C00B58053 /* concat.swift */; };
 		7DB424B11C86BB9900B58053 /* sorts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB424B01C86BB9900B58053 /* sorts.swift */; };
 		7DB424B21C86BB9900B58053 /* sorts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB424B01C86BB9900B58053 /* sorts.swift */; };
+		7DF05FE21C97E35800369B82 /* find.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6BC9E21C911651003DF3E2 /* find.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -306,29 +306,29 @@
 		7D6558281C7AC372006DCF88 /* software-tools-swift */ = {
 			isa = PBXGroup;
 			children = (
-				7D6558711C7B0370006DCF88 /* compress.swift */,
-				7D345A071C8A63CC00D4FA45 /* unique.swift */,
-				7DB424B01C86BB9900B58053 /* sorts.swift */,
-				7DB4246F1C86900C00B58053 /* concat.swift */,
-				7D6558721C7B0370006DCF88 /* count.swift */,
-				7D6558731C7B0370006DCF88 /* detab.swift */,
-				7DB4243D1C866D4100B58053 /* compare.swift */,
-				7D6558741C7B0370006DCF88 /* echo.swift */,
-				7D6558751C7B0370006DCF88 /* expand.swift */,
-				7D6558291C7AC372006DCF88 /* main.swift */,
-				7D6558491C7AC3CF006DCF88 /* copy.swift */,
-				7D6558551C7AF6C9006DCF88 /* getPut.swift */,
-				7D6558581C7AF6E9006DCF88 /* bufferStreamWrapper.swift */,
-				7D65585A1C7AF717006DCF88 /* fileHandler.swift */,
-				7D6559271C7C15CE006DCF88 /* crypt.swift */,
-				7D6559691C7C3D96006DCF88 /* translit.swift */,
-				7D18A7E61C7D575200AEDFC6 /* common.swift */,
-				7D18A7EF1C7E8D0600AEDFC6 /* tail.swift */,
 				7D18A8151C7EA31F00AEDFC6 /* argParser.swift */,
+				7D6558581C7AF6E9006DCF88 /* bufferStreamWrapper.swift */,
 				7D18A8341C80681800AEDFC6 /* calc.swift */,
 				7D345A301C8A74BB00D4FA45 /* comm.swift */,
-				7D65587D1C7B0377006DCF88 /* data */,
+				7D18A7E61C7D575200AEDFC6 /* common.swift */,
+				7D6558711C7B0370006DCF88 /* compress.swift */,
+				7DB4243D1C866D4100B58053 /* compare.swift */,
+				7DB4246F1C86900C00B58053 /* concat.swift */,
+				7D6558721C7B0370006DCF88 /* count.swift */,
+				7D6558491C7AC3CF006DCF88 /* copy.swift */,
+				7D6559271C7C15CE006DCF88 /* crypt.swift */,
+				7D6558731C7B0370006DCF88 /* detab.swift */,
+				7D6558741C7B0370006DCF88 /* echo.swift */,
+				7D6558751C7B0370006DCF88 /* expand.swift */,
 				7D6BC9E21C911651003DF3E2 /* find.swift */,
+				7D65585A1C7AF717006DCF88 /* fileHandler.swift */,
+				7D6558551C7AF6C9006DCF88 /* getPut.swift */,
+				7D6558291C7AC372006DCF88 /* main.swift */,
+				7DB424B01C86BB9900B58053 /* sorts.swift */,
+				7D18A7EF1C7E8D0600AEDFC6 /* tail.swift */,
+				7D6559691C7C3D96006DCF88 /* translit.swift */,
+				7D345A071C8A63CC00D4FA45 /* unique.swift */,
+				7D65587D1C7B0377006DCF88 /* data */,
 			);
 			path = "software-tools-swift";
 			sourceTree = "<group>";
@@ -736,7 +736,7 @@
 				7D345A321C8A74BB00D4FA45 /* comm.swift in Sources */,
 				7D18A7F11C7E933700AEDFC6 /* tail.swift in Sources */,
 				7D6559501C7C277D006DCF88 /* echo.swift in Sources */,
-				7D6BC9E41C911653003DF3E2 /* find.swift in Sources */,
+				7DF05FE21C97E35800369B82 /* find.swift in Sources */,
 				7D6559541C7C277D006DCF88 /* getPut.swift in Sources */,
 				7D6558851C7B03AD006DCF88 /* software_tools_test.swift in Sources */,
 				7D6559511C7C277D006DCF88 /* expand.swift in Sources */,

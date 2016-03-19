@@ -11,7 +11,7 @@ import Foundation
 
 public class GetC {
     var text: String = ""
-    let EOF: Character = "&" //XXX what char is best?
+    let EOF: Character = "´" //XXX what char is best?
     var lastc: Int = 0
     private var buf: String = ""
     
@@ -113,7 +113,7 @@ class PutC {
             if c == getC.EOF {
                 self.buf = self.buf.substringToIndex(self.buf.endIndex.predecessor())
             }
-            write(self.buf, path: path!, append: append)
+            write(self.buf, path: path, append: append)
             result = self.buf
             self.buf = ""
         }
