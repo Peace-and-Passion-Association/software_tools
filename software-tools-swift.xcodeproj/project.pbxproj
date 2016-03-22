@@ -132,6 +132,13 @@
 			remoteGlobalIDString = 7D6BC9C91C8FAEFA003DF3E2;
 			remoteInfo = translit;
 		};
+		7DACAD131CA0E61800B5360E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DACAD0F1CA0E61700B5360E /* find.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7DACAD051CA0E61700B5360E;
+			remoteInfo = find;
+		};
 		7DB424251C852BBC00B58053 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7DB4241B1C852BBC00B58053 /* reversePolishCalc.xcodeproj */;
@@ -211,6 +218,7 @@
 		7D6559691C7C3D96006DCF88 /* translit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = translit.swift; sourceTree = "<group>"; };
 		7D6BC9D31C8FAEFA003DF3E2 /* translit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = translit.xcodeproj; path = translit/translit.xcodeproj; sourceTree = "<group>"; };
 		7D6BC9E21C911651003DF3E2 /* find.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = find.swift; sourceTree = "<group>"; };
+		7DACAD0F1CA0E61700B5360E /* find.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = find.xcodeproj; path = find/find.xcodeproj; sourceTree = "<group>"; };
 		7DB4241B1C852BBC00B58053 /* reversePolishCalc.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = reversePolishCalc.xcodeproj; path = reversePolishCalc/reversePolishCalc.xcodeproj; sourceTree = "<group>"; };
 		7DB4243D1C866D4100B58053 /* compare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = compare.swift; sourceTree = "<group>"; };
 		7DB4245C1C86780F00B58053 /* compare.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = compare.xcodeproj; path = compare/compare.xcodeproj; sourceTree = "<group>"; };
@@ -273,21 +281,22 @@
 		7D65581D1C7AC372006DCF88 = {
 			isa = PBXGroup;
 			children = (
+				7D18A82E1C80679C00AEDFC6 /* calc.xcodeproj */,
+				7DB4245C1C86780F00B58053 /* compare.xcodeproj */,
+				7D6558EE1C7BE170006DCF88 /* compress.xcodeproj */,
+				7DB424851C86929000B58053 /* concat.xcodeproj */,
+				7D6558431C7AC3B4006DCF88 /* copy.xcodeproj */,
+				7D65593C1C7C1833006DCF88 /* crypt.xcodeproj */,
+				7D6558CB1C7BDBAB006DCF88 /* detab.xcodeproj */,
+				7D65590A1C7BF485006DCF88 /* expand.xcodeproj */,
+				7DACAD0F1CA0E61700B5360E /* find.xcodeproj */,
+				7DB424A71C86B27900B58053 /* makecopy.xcodeproj */,
+				7DB4241B1C852BBC00B58053 /* reversePolishCalc.xcodeproj */,
+				7D3459EA1C8A5FE800D4FA45 /* sort.xcodeproj */,
+				7D18A8051C7E965D00AEDFC6 /* tail.xcodeproj */,
 				7D6BC9D31C8FAEFA003DF3E2 /* translit.xcodeproj */,
 				7D345A1D1C8A6B5400D4FA45 /* unique.xcodeproj */,
-				7D3459EA1C8A5FE800D4FA45 /* sort.xcodeproj */,
-				7DB424A71C86B27900B58053 /* makecopy.xcodeproj */,
-				7DB424851C86929000B58053 /* concat.xcodeproj */,
-				7DB4245C1C86780F00B58053 /* compare.xcodeproj */,
-				7DB4241B1C852BBC00B58053 /* reversePolishCalc.xcodeproj */,
-				7D18A82E1C80679C00AEDFC6 /* calc.xcodeproj */,
-				7D18A8051C7E965D00AEDFC6 /* tail.xcodeproj */,
-				7D65593C1C7C1833006DCF88 /* crypt.xcodeproj */,
-				7D65590A1C7BF485006DCF88 /* expand.xcodeproj */,
-				7D6558EE1C7BE170006DCF88 /* compress.xcodeproj */,
-				7D6558CB1C7BDBAB006DCF88 /* detab.xcodeproj */,
 				7D6558A71C7B0525006DCF88 /* wordcount.xcodeproj */,
-				7D6558431C7AC3B4006DCF88 /* copy.xcodeproj */,
 				7D6558281C7AC372006DCF88 /* software-tools-swift */,
 				7D6558831C7B03AD006DCF88 /* software-tools-test */,
 				7D6558271C7AC372006DCF88 /* Products */,
@@ -403,6 +412,14 @@
 			isa = PBXGroup;
 			children = (
 				7D6BC9D81C8FAEFB003DF3E2 /* translit */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DACAD101CA0E61700B5360E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DACAD141CA0E61800B5360E /* find */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -538,6 +555,10 @@
 					ProjectRef = 7D65590A1C7BF485006DCF88 /* expand.xcodeproj */;
 				},
 				{
+					ProductGroup = 7DACAD101CA0E61700B5360E /* Products */;
+					ProjectRef = 7DACAD0F1CA0E61700B5360E /* find.xcodeproj */;
+				},
+				{
 					ProductGroup = 7DB424A81C86B27900B58053 /* Products */;
 					ProjectRef = 7DB424A71C86B27900B58053 /* makecopy.xcodeproj */;
 				},
@@ -650,6 +671,13 @@
 			fileType = "compiled.mach-o.executable";
 			path = translit;
 			remoteRef = 7D6BC9D71C8FAEFB003DF3E2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7DACAD141CA0E61800B5360E /* find */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = find;
+			remoteRef = 7DACAD131CA0E61800B5360E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		7DB424261C852BBC00B58053 /* reversePolishCalc */ = {

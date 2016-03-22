@@ -439,7 +439,31 @@ class software_tools_test: XCTestCase {
     
     func testMatch() {
         //[string, pattern, bool]
-        let testbed = [["var i = 0", "var", true], ["var i = 0", "let", false]]
+        let testbed = [ //["var i = 0", "var", true],
+//                        ["var i = 0", "let", false],
+//                        ["var i = 2", " = ", true],
+//                        ["var i = 2", "= [1-3]", true],
+                        ["var i = 2", "= [^0-9]", false],
+//                        ["hello", "hel*o", true],
+//                        ["fooa", "fooo*a", true],
+//                        ["fa", "fo*a", true],
+//                        ["fa", "foo*a", false],
+                        ]
+        for o in testbed {
+            let a = o[0] as! String
+            let b = o[1] as! String
+            var pat = ""
+            getpat(b, pat: &pat)
+            print(pat)
+            let r = o[2] as! Bool
+            let res = match(a, pat: pat)
+            XCTAssertEqual(res, r)
+        }
+    }
+    
+    func testMatcheasily() {
+        //[string, pattern, bool]
+        let testbed = [["var i = 0", "åvåaår", true], ["var i = 0", "ålåeåt", false]]
         for o in testbed {
             let a = o[0] as! String
             let b = o[1] as! String
@@ -448,6 +472,20 @@ class software_tools_test: XCTestCase {
             XCTAssertEqual(res, r)
         }
         
+    }
+    
+    func testOmatch() {
+        //[inputline, index, pat, j, result]: [String, Int, String, Int, bool]
+        let testbed = [["h", 0, "åhåi", 0, true], ["h", 0, "åhåi", 2, false]]
+        for o in testbed {
+            let a = o[0] as! String
+            var b = o[1] as! Int
+            let c = o[2] as! String
+            let d = o[3] as! Int
+            let r = o[4] as! Bool
+            let res = omatch(a, i: &b, pat: c, j: d)
+            XCTAssertEqual(res, r)
+        }
     }
     
     func testLocate() {
@@ -477,12 +515,13 @@ class software_tools_test: XCTestCase {
     
     func testGetpat() {
         //[arg, pat, result]: [String, String, String]
-        let testbed = [["hi", "", String(CHAR) + "h" + String(CHAR) + "i"]]
+        let testbed = [["hi", "", String(CHAR) + "h" + String(CHAR) + "i"], ["hi*e", "", String(CHAR) + "h" + "*000" + String(CHAR) + "i" + String(CHAR) + "e"], ["h*i*e*", "", "*000" + String(CHAR) + "h" + "*000" + String(CHAR) + "i" + "*060" + String(CHAR) + "e"]]
         for o in testbed {
             let a = o[0] as! String
             var b = o[1] as! String
             let r = o[2] as! String
             let res = getpat(a, pat: &b)
+            print(b)
             XCTAssertEqual(b, r)
         }
     }
@@ -514,6 +553,23 @@ class software_tools_test: XCTestCase {
             let res = getccl(a, i: &b, pat: &c, j: &d)
             XCTAssertEqual(r, res)
             XCTAssertEqual(rp, c)
+        }
+    }
+    
+    func testStclos() {
+        //[pat, j, lastj, lastcl, result]: [String, Int, Int, Int, string]
+        let testbed = [["", 0, 0, 0, ""], ["[5hello", 7, 8, 9, ""]]
+        for o in testbed {
+            var a = o[0] as! String
+            var b = o[1] as! Int
+            var c = o[2] as! Int
+            var d = o[3] as! Int
+            let r = o[4] as! String
+            let res = stclos(&a, j: &b, lastj: &c, lastcl: d)
+            print("hoge")
+            print(a)
+            print(res)
+            //XCTAssertEqual(r, a)
         }
     }
 }

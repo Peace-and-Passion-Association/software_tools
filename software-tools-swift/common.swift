@@ -10,6 +10,7 @@ import Foundation
 
 let EOS: Character = "ß"
 let EOF: Character = "´"
+let NULLC: Character = "œ"
 let CHAR: Character = "å"
 let ESCAPE: Character = "@"
 let CLOSURE: Character = "*"
@@ -68,5 +69,8 @@ extension String {
 
     func c(index: Int) -> Character {
         return self[self.characters.startIndex.advancedBy(index)]
+    }
+    func s(index: Int) -> String {
+        return String(self[self.characters.startIndex.advancedBy(index)])
     }
 }

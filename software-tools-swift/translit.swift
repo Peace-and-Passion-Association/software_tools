@@ -194,8 +194,25 @@ func makset(array: [Character], k: Int, inout set: String) -> String {
     return set
 }
 
+func insertset(c: Character, inout set: String, inout index: Int) {
+    if set.characters.count <= index {
+        set.append(c)
+        index++
+    } else if index < 0{
+        stdError("index cannot minus")
+    } else {
+        var tmp = Array(set.characters)
+        tmp.insert(c, atIndex: index)
+        set = String(tmp)
+        index++
+    }
+}
+
 func addset(c: Character, inout set: String, inout index: Int) {
     if set.characters.count <= index {
+        while set.characters.count < index {
+            set += String(NULLC)
+        }
         set.append(c)
         index++
     } else if index < 0{
