@@ -7,7 +7,10 @@ They can be used as commands on the OSX terminal.
 
 try to use command.  
 (e.g.wordcount  
+
+'''
 cd wordcount/wordcount  
 ./buildCommand.sh  
 ./wordcount args...  
 
+'''
